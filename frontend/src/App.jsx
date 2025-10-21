@@ -5,14 +5,13 @@ import Footer from "./components/Footer";
 
 
 import "./App.css";
-import { Body } from "./components/Body";
+import Body from "./components/Body";
 
 const App = () => {
   return (
     <div>
       <Header />
       <Body />
-
       <Footer />
     </div>
   );
