@@ -17,41 +17,43 @@ export default function ProductPage({ editorView }) {
 
   const faqs = [
     {
-      q: "Is it safe to use JSON-Format.com with sensitive data?",
-      a: "Yes, your data is processed locally in your browser. We do not store or transmit your JSON.",
+      q: "Is it safe to use the JWT Generator for sensitive token data?",
+      a: "Yes, your data is never sent to any server. All JWT creation, signing, and encryption happen locally in your browser using AES-256 encryption for maximum security.",
     },
     {
-      q: "Do I need to create an account to use JSON-Format.com?",
-      a: "No account or signup is required. All tools are free and accessible instantly.",
+      q: "Do I need an account to generate JWTs online?",
+      a: "No, you don’t need to sign up or log in. Our JWT Generator works instantly and completely free — no account required.",
     },
     {
-      q: "Can I convert JSON data to other formats like CSV or YAML?",
-      a: "Yes, our platform supports conversion to CSV, YAML, and other formats.",
+      q: "Can I convert or use my JSON data to create JWTs?",
+      a: "Yes, you can easily input any JSON payload and generate JWT tokens from it, with options to apply JWS signing or JWE encryption for secure data handling.",
     },
     {
-      q: "How can I read my JSON data using JSON-Format.com?",
-      a: "Use the tree view or text mode to explore and debug your JSON data easily.",
+      q: "How can I decode or verify a JWT token?",
+      a: "Use our built-in JWT Decoder and Verifier to inspect the token header, payload, and signature. It helps ensure the token’s authenticity and integrity.",
     },
   ];
 
+
   const features = [
     {
-      title: "Online JSON Formatter",
-      desc: "Format and validate JSON in seconds with zero setup.",
+      title: "JWT Token Generator",
+      desc: "Create secure JWT tokens online with support for JWS and JWE standards. Instantly generate, sign, and encrypt tokens with AES-256 encryption.",
     },
     {
-      title: "JSON Viewer",
-      desc: "Navigate JSON in tree or text mode for improved readability.",
+      title: "JWT Decoder & Verifier",
+      desc: "Easily decode JWT headers and payloads, and verify their signature to ensure authenticity and integrity.",
     },
     {
-      title: "JSON Compare",
-      desc: "Spot differences between two JSON files instantly.",
+      title: "JWS Signature Tool",
+      desc: "Generate and validate JSON Web Signatures (JWS) for tamper-proof authentication and message integrity.",
     },
     {
-      title: "JSON Beautifier",
-      desc: "Make JSON clean and structured with proper indentation.",
+      title: "JWE Encryption Tool",
+      desc: "Encrypt and decrypt JSON Web Encryption (JWE) tokens using AES-256 for maximum data protection and confidentiality.",
     },
   ];
+
 
   return (
     <Box>
@@ -94,7 +96,6 @@ export default function ProductPage({ editorView }) {
       {/* FEATURES */}
       <Box sx={{ py: 8, px: 4 }}>
         <Typography
-          component="h1"
           sx={{
             textAlign: "center",
             mb: 8,
@@ -103,8 +104,10 @@ export default function ProductPage({ editorView }) {
             color: theme.palette.primary.main,
           }}
         >
-          JSON Editor Online – Simplify Your JSON Workflow
+          <h1>JSON Web Token – JWT</h1>
+          <h2>Featured with JSON Web Signature-JWS and JSON Web Encryption-JWE</h2>
         </Typography>
+
         <Grid container spacing={6} sx={{ justifyContent: "center" }}>
           {features.map((f, i) => (
             <Grid item xs={12} md={6} key={i}>
@@ -136,15 +139,17 @@ export default function ProductPage({ editorView }) {
           variant="h2"
           sx={{ fontSize: "28px", fontWeight: 600, mb: 3 }}
         >
-          Why Choose Our JSON Editor Online?
+          Why Choose Our JWT Generator Online?
         </Typography>
         <ul style={{ fontSize: "18px", lineHeight: "1.8" }}>
-          <li>✅ 100% Free & Online – no signup required</li>
-          <li>✅ Beginner & professional friendly</li>
-          <li>✅ Secure – your JSON data stays private</li>
-          <li>✅ All-in-one: Format, Beautify, Validate, View, Compare</li>
+          <li>✅ 100% Free & Online – no account or installation required</li>
+          <li>✅ Generate, Sign (JWS), and Encrypt (JWE) tokens in one place</li>
+          <li>✅ AES-256 powered – all JWT processing happens locally for complete data privacy</li>
+          <li>✅ Developer-friendly – simple interface for both beginners and professionals</li>
+          <li>✅ Verify, Decode, and Inspect JWTs with real-time validation</li>
         </ul>
       </Box>
+
 
       {/* FAQ */}
       <Box sx={{ py: 6, maxWidth: "800px", mx: "auto" }}>

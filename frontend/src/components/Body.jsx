@@ -59,6 +59,10 @@ const Body = () => {
 
     return (
         <div className="max-w-7xl mx-auto p-6 space-y-8 mt-15">
+            {/* Heading */}
+            <h1 className="text-3xl font-bold text-center mb-6">
+                JSON Web Token - JWT Generator
+            </h1>
             {/* Top Toolbar */}
             <div className="flex justify-between items-center">
                 <div className="flex space-x-4">
