@@ -30,7 +30,7 @@ const Body = () => {
                 }
 
                 // NOTE: Change 'encrypt' to a more standard JWT term like 'generate' or 'sign'
-                const response = await axios.post("http://localhost:5000/api/encrypt", {
+                const response = await axios.post("http://54.174.66.17:5000/api/encrypt", {
                     header: JSON.parse(headerValue),
                     payload: JSON.parse(payloadValue),
                     secret: secretValue,
@@ -42,7 +42,7 @@ const Body = () => {
                     return;
                 }
                 // NOTE: Change 'decrypt' to a more standard JWT term like 'decode' or 'verify'
-                const response = await axios.post("http://localhost:5000/api/decrypt", {
+                const response = await axios.post("http://54.174.66.17:5000/api/decrypt", {
                     encrypted: payloadValue,
                     secret: secretValue,
                 });
